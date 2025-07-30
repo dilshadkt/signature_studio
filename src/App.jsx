@@ -51,8 +51,8 @@ function App() {
     <>
       <ReactLenis root />
       {/* landpage section  */}
-      <main className="w-full h-screen overflow-hidden relative">
-        <div className="absolute top-0 z-10 left-0 w-full h-full ">
+      <main className="w-full h-screen max-w-[1480px] mx-auto  overflow-hidden relative">
+        <div className="absolute  top-0 z-10 left-0 w-full h-full ">
           <Home />
         </div>
         <div className="absolute z-20 font-semibold top-0 left-20 my-auto  h-fit bottom-0">
@@ -137,7 +137,7 @@ function App() {
       </main>
       {/* how we work section  */}
       <main
-        className="h-full relative w-full bg-[#ffffff] flex py-20 flex-col items-center
+        className="h-full overflow-y-hidden  mx-auto relative w-full bg-[#ffffff] flex py-20 flex-col items-center
      "
       >
         <h2 className="text-5xl bebas-neue-bold text-[#293849]">
