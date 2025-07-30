@@ -1,6 +1,7 @@
 import { GoArrowUpRight } from "react-icons/go";
 import Home from "./components/Home";
-import logo from "./assets/logo.png";
+import logo from "./assets/ARCHICULTURE_LOGO.png";
+import { LuMouse } from "react-icons/lu";
 function App() {
   return (
     <>
@@ -9,9 +10,12 @@ function App() {
           <Home />
         </div>
         <div className="absolute z-20 font-semibold top-0 left-20 my-auto  h-fit bottom-0">
-          <h1 className="text-7xl londrina-outline-regular leading-24 text-gray-800">
-            Master Architecture with <br />
-            <span className="bg-black text-white px-3">the Power of AI</span>
+          <h1 className="text-7xl bebas-neue-bold uppercase leading-24 text-[#293849]">
+            Master Architecture <br />
+            with{" "}
+            <span className="bg-[#293849] text-white px-3">
+              the Power of AI
+            </span>
           </h1>
           <p className="text-lg poppins-light my-5 text-gray-800">
             From concept to construction, gain hands-on experience <br /> using
@@ -25,26 +29,48 @@ function App() {
             <GoArrowUpRight className="text-lg" />
           </button>
         </div>
+        <span
+          className="absolute flex items-center gap-x-2 right-0 text-sm poppins-regular mx-auto w-fit  text-[#909294]  left-0 bottom-16
+           z-40"
+        >
+          <LuMouse className="text-xl -translate-y-0.5" /> Scroll down to learn
+          more
+        </span>
+        <p className="absolute bottom-16  poppins-regular leading-7  text-gray-600 max-w-xs w-fit h-fit right-10   z-20">
+          This Upskilling program bridges the gap between academic learning and
+          real-world architectural practice
+        </p>
         <div className="bg-[#f3f3f3] h-20 w-56 absolute bottom-0 right-0"></div>
         <nav
           className="absolute left-0 px-20 right-0 top-0 w-full 
-        h-16  flex items-center justify-between"
+        h-20  flex items-center justify-between"
         >
           <div className="flex items-center gap-x-3">
-            <img src={logo} alt="logo" className="w-6 h-6 object-contain" />
-            <h1 className="text-2xl font-bold font-mono">AECHICULTURE</h1>
+            <img src={logo} alt="logo" className="w-[200px] object-contain" />
           </div>
-          <ul className="flex font-medium items-center gap-x-8">
+          <ul
+            className="flex w-full font-medium max-w-sm poppins-regular
+           text-[#293849] cursor-pointer  items-center justify-around gap-x-8"
+          >
             <li>
-              <a href="#">Home</a>
+              <a href="#" className="nav-link">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#" className="nav-link">
+                About
+              </a>
             </li>
             <li>
-              <a href="#">Fees</a>
+              <a href="#" className="nav-link">
+                Fees
+              </a>
             </li>
           </ul>
+          <button className="border-2 border-dotted poppins-medium  text-sm border-[#293849]/60 rounded-md px-5 py-2">
+            Contact Us
+          </button>
         </nav>
       </main>
       <main className="h-screen w-full bg-[#ffffff] flex items-center justify-center">

@@ -1,6 +1,43 @@
 @import "tailwindcss";
 
 /* Google Fonts Classes */
+.bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bebas-neue-bold {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Navigation link underline effect */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2761c9;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 90%;
+}
+
+.nav-link:hover {
+  color: #293849;
+  font-weight: 600;
+}
+
 .londrina-outline-regular {
   font-family: "Londrina Outline", sans-serif;
   font-weight: 400;
