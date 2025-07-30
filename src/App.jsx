@@ -7,6 +7,8 @@ import how from "./assets/how.png";
 import arrow from "./assets/arrow.png";
 import arrow2 from "./assets/arrow2.png";
 import paper from "./assets/paper.webp";
+import { RiVipDiamondFill } from "react-icons/ri";
+import { FaLightbulb } from "react-icons/fa";
 function App() {
   const lenis = useLenis((lenis) => {
     // called every scroll
@@ -30,13 +32,26 @@ function App() {
         "Turns upskilling into a lifestyle. Students don’t just come to learn. They come to belong.",
     },
   ];
+  const benefits = [
+    {
+      icon: <RiVipDiamondFill className="text-[#293849]/95 text-5xl" />,
+      title: "Earn 50% more than the industry average",
+      description:
+        "Skilled designers enjoy excellent career prospects as well as a competitive advantage in the job market.",
+    },
+    {
+      icon: <FaLightbulb className="text-[#293849]/95 text-5xl" />,
+      title: "Unlock your creativity and improve productivity",
+      description:
+        "Archiculture lets you breeze through iterations so you can solve real-world design problems using automation.",
+    },
+  ];
 
   return (
     <>
       <ReactLenis root />
       {/* landpage section  */}
       <main className="w-full h-screen overflow-hidden relative">
-        <img src={arrow} alt="" className="absolute -bottom-20 z-20 -left-40" />
         <div className="absolute top-0 z-10 left-0 w-full h-full ">
           <Home />
         </div>
@@ -52,14 +67,21 @@ function App() {
             From concept to construction, gain hands-on experience <br /> using
             AI to elevate your architectural thinking and execution.
           </p>
-          <button
-            className=" mt-7 flex bebas-neue gap-x-3 border-2 text-lg tracking-[0.1em]  uppercase
+          <div className="relative mt-7">
+            <button
+              className="  flex bebas-neue gap-x-3 border-2 text-lg tracking-[0.1em]  uppercase
              border-gray-800/50
            text-white bg-[#293849] px-10 rounded-lg py-3"
-          >
-            Get Started
-            <GoArrowUpRight className="text-lg translate-y-1" />
-          </button>
+            >
+              Get Started
+              <GoArrowUpRight className="text-lg translate-y-1" />
+            </button>
+            <img
+              src={arrow}
+              alt=""
+              className="absolute -bottom-64 z-20 -left-56"
+            />
+          </div>
         </div>
         <span
           className="absolute flex items-center gap-x-2 right-0 text-sm poppins-regular mx-auto w-fit  text-[#909294]  left-0 bottom-16
@@ -115,7 +137,7 @@ function App() {
       </main>
       {/* how we work section  */}
       <main
-        className="h-screen relative w-full bg-[#ffffff] flex py-20 flex-col items-center
+        className="h-full relative w-full bg-[#ffffff] flex py-20 flex-col items-center
      "
       >
         <h2 className="text-5xl bebas-neue-bold text-[#293849]">
@@ -127,7 +149,7 @@ function App() {
           talent is shaped, where confidence is built, and where Architecture is
           celebrated like a culture
         </p>
-        <div className="grid max-w-7xl  gap-x-2 my-6  grid-cols-2 relative z-20">
+        <div className="grid  max-w-7xl  gap-x-2 my-6  grid-cols-2 relative z-20">
           <div className="flex items-center  justify-center">
             <img src={how} alt="" />
           </div>
@@ -152,6 +174,26 @@ function App() {
             </ul>
           </div>
         </div>
+
+        <h2 className="text-5xl my-20 bebas-neue-bold text-[#293849]">
+          See The Benifits
+        </h2>
+        <div className="max-w-7xl relative gap-7   z-20 grid grid-cols-2">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="flex border relative border-gray-200  p-5 rounded-lg gap-y-3 flex-col"
+            >
+              {benefit.icon}
+              <span className="bebas-neue-bold mt-5 text-xl tracking-widest text-[#293849]">
+                {benefit.title}
+              </span>
+              <p className="poppins-regular leading-7 text-gray-600">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
         <img
           src={paper}
           alt=""
@@ -173,7 +215,7 @@ function App() {
         <img
           src={arrow2}
           alt=""
-          className="absolute top-20 z-20 -left-20 opacity-50"
+          className="absolute top-20 z-10 -left-20 opacity-25"
         />
       </main>
     </>
